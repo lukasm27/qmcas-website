@@ -78,7 +78,6 @@ header nav a:hover, header nav a.active {
 /* ============== HERO SECTION ============== */
 .hero {
     background-color: var(--primary-color); /* Fallback color */
-    /* Update the url() part to point to your local image */
     background-image: linear-gradient(rgba(13, 44, 79, 0.8), rgba(13, 44, 79, 0.8)), url('images/home.jpg');
     background-size: cover;
     background-position: center;
@@ -163,14 +162,14 @@ footer {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Allows sections to stack on smaller screens */
+    flex-wrap: wrap; 
     gap: 30px;
     margin-bottom: 40px;
 }
 
 .footer-section {
     flex: 1;
-    min-width: 250px; /* Prevents sections from getting too squished */
+    min-width: 250px; 
 }
 
 .footer-section h3 {
@@ -188,17 +187,13 @@ footer {
 }
 
 .footer-section a:hover {
-    color: var(--secondary-color); /* Highlight color on hover */
+    color: var(--secondary-color); 
+
+.social-links i {
+    font-size: 1.8rem; 
+    transition: color 0.3s ease;
 }
 
-.social-links a {
-    margin-right: 15px;
-    font-weight: 600;
-}
-
-.copyright {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Faint dividing line */
-    font-size: 0.9rem;
+.social-links a:hover i {
+    color: var(--secondary-color);
 }
