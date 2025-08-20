@@ -1,0 +1,204 @@
+/* ============== GLOBAL STYLES & VARIABLES ============== */
+:root {
+    --primary-color: #336698; 
+    --secondary-color: #0A549A; 
+    --background-color: #e9eef0; 
+    --text-color: #333;
+    --light-text-color: #e9eef0;
+    --card-background: #85a4c1;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* ============== HEADER & NAVIGATION ============== */
+header {
+    background-color: var(--light-text-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px
+; /* Adjust this value as needed */
+    vertical-align: middle; /* Helps align the logo with the nav links */
+}
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+header nav a {
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover, header nav a.active {
+    color: var(--secondary-color);
+}
+
+/* ============== HERO SECTION ============== */
+.hero {
+    background-color: var(--primary-color); /* Fallback color */
+    /* Update the url() part to point to your local image */
+    background-image: linear-gradient(rgba(13, 44, 79, 0.8), rgba(13, 44, 79, 0.8)), url('images/home.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 100px 0;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+
+/* ============== ANNOUNCEMENTS SECTION ============== */
+.announcements {
+    padding: 80px 0;
+}
+
+.announcement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-date {
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.card p {
+    flex-grow: 1; /* This makes the card bodies equal height */
+}
+
+.card a {
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+
+/* ============== FOOTER ============== */
+footer {
+    background-color: var(--primary-color);
+    color: rgba(255, 255, 255, 0.8); /* Slightly softer white text */
+    padding: 50px 0 20px 0;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows sections to stack on smaller screens */
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px; /* Prevents sections from getting too squished */
+}
+
+.footer-section h3 {
+    color: var(--light-text-color);
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    margin-bottom: 15px;
+}
+
+.footer-section a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--secondary-color); /* Highlight color on hover */
+}
+
+.social-links a {
+    margin-right: 15px;
+    font-weight: 600;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Faint dividing line */
+    font-size: 0.9rem;
+}
