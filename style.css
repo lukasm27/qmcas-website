@@ -342,3 +342,48 @@ footer {
     font-size: 0.9rem;
     color: #555;
 }
+/* ============== SPONSORS PAGE STYLES ============== */
+.sponsors-section {
+    padding: 60px 0;
+}
+
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    align-items: center;
+}
+
+.sponsor-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sponsor-logo img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%); /* Makes logos grayscale */
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.sponsor-logo img:hover {
+    filter: grayscale(0%); /* Brings back color on hover */
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.become-sponsor-section {
+    background-color: var(--background-color);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.become-sponsor-section .container {
+    max-width: 800px;
+}
+
+.become-sponsor-section p {
+    margin-bottom: 30px;
+}
