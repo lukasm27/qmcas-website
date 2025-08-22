@@ -296,3 +296,49 @@ footer {
     padding-top: 40px;
     border-top: 1px solid #ddd;
 }
+/* ============== ABOUT PAGE STYLES ============== */
+.mission-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.mission-section .container {
+    max-width: 800px; /* Makes the paragraph easier to read */
+}
+
+.committee-section {
+    background-color: #ffffff; /* A slightly different background to separate the section */
+    padding: 60px 0;
+}
+
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.committee-card img {
+    width: 100%;
+    max-width: 200px; /* Control the image size */
+    height: auto;
+    border-radius: 50%; /* Makes the images circular */
+    margin-bottom: 15px;
+    border: 4px solid var(--background-color);
+}
+
+.committee-card h3 {
+    margin-bottom: 5px;
+}
+
+.committee-title {
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.committee-bio {
+    font-size: 0.9rem;
+    color: #555;
+}
