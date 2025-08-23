@@ -45,6 +45,8 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex;
+    flex-wrap: wrap; 
 }
 
 header .container {
@@ -388,3 +390,60 @@ footer {
     margin-bottom: 30px;
 }
 /* ============== WHY JOIN SECTION uses announcement styles */
+/* ============== MOBILE NAVIGATION STYLES ============== */
+
+/* The hamburger button */
+.mobile-nav-toggle {
+    display: none; /* Hidden on desktop */
+    position: absolute;
+    z-index: 2000;
+    right: 1rem;
+    top: 1.2rem;
+    background: transparent;
+    border: 0;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.sr-only {
+    position: absolute; 
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px; 
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* This is the media query that activates mobile styles */
+@media (max-width: 768px) {
+    .mobile-nav-toggle {
+        display: block; /* Shown on mobile */
+    }
+
+    .primary-navigation {
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%; /* top, right, bottom, left */
+        background: hsla(0, 0%, 100%, 0.95);
+        backdrop-filter: blur(1rem);
+        
+        flex-direction: column;
+        padding: min(20rem, 15vh) 2rem;
+
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+
+    /* When the menu is open */
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .primary-navigation ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+}

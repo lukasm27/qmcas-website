@@ -13,22 +13,26 @@
 <body>
 
     <header>
-        <div class="container">
-            <a href="index.html" class="logo">
-    <img src="images/logo.jpg">
-</a>
-            <nav>
-                <ul>
-                    <li><a href="https://qmcas.com/" class="active">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="#">Announcements</a></li>
-                    <li><a href="sponsors.html">Sponsors</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="QMCAS Society Logo">
+        </a>
+
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+        </button>
+
+        <nav id="primary-navigation" class="primary-navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <main>
         <section class="hero">
@@ -107,7 +111,9 @@
             </div>
         </div>
     </div>
+<footer>
 </footer>
 
+    <script src="nav.js"></script>
 </body>
 </html>
