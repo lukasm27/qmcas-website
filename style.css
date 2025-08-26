@@ -447,3 +447,44 @@ footer {
         gap: 2rem;
     }
 }
+/* ============== MEMBERSHIP PAGE STYLES ============== */
+.benefits-section {
+    padding: 60px 0;
+}
+
+.benefits-section .container {
+    max-width: 800px;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    font-size: 1.1rem;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.benefits-list i {
+    color: var(--secondary-color);
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.join-now-section {
+    background-color: var(--background-color);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.join-now-section .container {
+    max-width: 800px;
+}
+
+.join-now-section p {
+    margin-bottom: 30px;
+}

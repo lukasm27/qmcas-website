@@ -7,6 +7,7 @@ This project was developed on a freelance basis for QMCAS.
 This is a static website built with fundamental web technologies, focusing on a clean, responsive, and lightweight user experience.
 HTML: For the structure and content of the website.
 CSS: For styling, layout, and responsive design to ensure the site works well on all devices.
+JavaScript: To optimise the website for mobile viewing.
 
 **Status**
 Current Status: In Development
