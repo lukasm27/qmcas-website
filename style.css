@@ -2,7 +2,7 @@
 :root {
     --primary-color: #336698; 
     --secondary-color: #0A549A; 
-    --background-color: #e9eef0; 
+    --background-color: #F6F6F6; 
     --text-color: #333;
     --light-text-color: #e9eef0;
     --card-background: #85a4c1;
@@ -39,13 +39,15 @@ a {
 
 /* ============== HEADER & NAVIGATION ============== */
 header {
-    padding: 1rem 0;
+    padding: 1rem 1rem;
     position: sticky;
     top: 0;
     z-index: 1000;
     display: flex;
     flex-wrap: wrap;
     background-color: var(--background-color); 
+    justify-content: space-between;
+    align-items: center;
 }
 
 header .container {
@@ -55,9 +57,9 @@ header .container {
 }
 
 .logo img {
-    height: 80px
-; /* Adjust this value as needed */
-    vertical-align: middle; /* Helps align the logo with the nav links */
+    height: 80px;
+    margin-right: auto; 
+    vertical-align: middle;
 }
 header nav ul {
     list-style-type: none;
@@ -79,7 +81,7 @@ header nav a:hover, header nav a.active {
 /* ============== HERO SECTION ============== */
 .hero {
     background-color: var(--primary-color); /* Fallback color */
-    background-image: linear-gradient(rgba(13, 44, 79, 0.5), rgba(13, 44, 79, 0.5)), url('images/home.jpg');
+    background-image: linear-gradient(rgba(13, 44, 79, 0.5), rgba(13, 44, 79, 0.5)), url('images/home0.jpg');
     background-size: cover;
     background-position: center;
     color: var(--light-text-color);
