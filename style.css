@@ -39,14 +39,13 @@ a {
 
 /* ============== HEADER & NAVIGATION ============== */
 header {
-    background-color: var(--light-text-color);
     padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+    background-color: var(--background-color); 
 }
 
 header .container {
@@ -80,12 +79,12 @@ header nav a:hover, header nav a.active {
 /* ============== HERO SECTION ============== */
 .hero {
     background-color: var(--primary-color); /* Fallback color */
-    background-image: linear-gradient(rgba(13, 44, 79, 0.8), rgba(13, 44, 79, 0.8)), url('images/home.jpg');
+    background-image: linear-gradient(rgba(13, 44, 79, 0.5), rgba(13, 44, 79, 0.5)), url('images/home.jpg');
     background-size: cover;
     background-position: center;
     color: var(--light-text-color);
     text-align: center;
-    padding: 100px 0;
+    padding: 200px 0;
 }
 .hero h1 {
     font-size: 3rem;
