@@ -38,46 +38,44 @@ a {
 }
 
 /* ============== HEADER & NAVIGATION ============== */
+
 header {
-    padding: 1rem 1rem;
+    background-color: var(--background-color);
+    padding: 1rem 3rem; /* Adjust horizontal padding as you like */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: var(--background-color); 
-    justify-content: space-between;
-    align-items: center;
-}
-
-header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo img {
-    height: 80px;
-    margin-right: auto; 
+    height: 80px; /* Adjust as needed */
     vertical-align: middle;
 }
-header nav ul {
-    list-style-type: none;
+
+/* This is the correct rule for the DESKTOP navigation list */
+.primary-navigation ul {
+    display: flex; /* This makes the list horizontal */
+    gap: 25px;
+    list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    gap: 25px;
 }
 
-header nav a {
+/* Styles for the links inside the navigation */
+.primary-navigation a {
     font-weight: 600;
     transition: color 0.3s ease;
+    color: var(--primary-color); /* Ensures links have the correct default color */
 }
 
-header nav a:hover, header nav a.active {
+.primary-navigation a:hover,
+.primary-navigation a.active {
     color: var(--secondary-color);
 }
-
 /* ============== HERO SECTION ============== */
 .hero {
     background-color: var(--primary-color); /* Fallback color */
@@ -421,7 +419,7 @@ footer {
 /* This is the media query that activates mobile styles */
 @media (max-width: 768px) {
     .mobile-nav-toggle {
-        display: block; /* Shown on mobile */
+        display: block; /* This makes the button appear */
     }
 
     .primary-navigation {
@@ -442,13 +440,13 @@ footer {
     .primary-navigation[data-visible="true"] {
         transform: translateX(0%);
     }
-
     .primary-navigation ul {
-        flex-direction: column;
+        flex-direction: column; /* This stacks them vertically */
         align-items: flex-start;
         gap: 2rem;
     }
 }
+
 /* ============== MEMBERSHIP PAGE STYLES ============== */
 .benefits-section {
     padding: 60px 0;

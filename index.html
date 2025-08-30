@@ -11,23 +11,24 @@
     <link rel="stylesheet" href="style.css">
     </head>
 <body>
-
     <header>
-        <a href="http://qmcas.com/" class="logo">
+        <a href="index.html" class="logo">
             <img src="images/logo.jpg" alt="QMCAS Society Logo">
         </a>
-
-        <nav id="primary-navigation" class="primary-navigation">
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+        </button>
+        <nav id="primary-navigation" class="primary-navigation" data-visible="false">
             <ul>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="articles.html">Firm Articles</a></li>
                 <li><a href="accelerator.html">Career Accelerator</a></li>
                 <li><a href="sponsors.html">Sponsors</a></li>
-		        <li><a href="membership.html">Join Us</a></li>
+                <li><a href="membership.html">Join Us</a></li>
             </ul>
         </nav>
-</header>
+    </header>
 
     <main>
         <section class="hero">
