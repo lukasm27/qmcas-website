@@ -419,7 +419,20 @@ footer {
 /* This is the media query that activates mobile styles */
 @media (max-width: 768px) {
     .mobile-nav-toggle {
-        display: block; /* This makes the button appear */
+        width: 2rem;
+        height: 2rem;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    /* This creates the hamburger icon when the menu is closed */
+    .mobile-nav-toggle[aria-expanded="false"] {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(51, 102, 152)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* This creates the close 'X' icon when the menu is open */
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(51, 102, 152)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M6 6l18 18M24 6L6 24'/%3e%3c/svg%3e");
     }
 
     .primary-navigation {
