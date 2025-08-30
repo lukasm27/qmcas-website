@@ -423,6 +423,7 @@ footer {
         height: 2rem;
         background-repeat: no-repeat;
         background-position: center;
+        display: block;
     }
 
     /* This creates the hamburger icon when the menu is closed */
