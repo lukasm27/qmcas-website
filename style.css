@@ -359,17 +359,34 @@ footer {
     color: #555;
 }
 /* ============== SPONSORS PAGE STYLES ============== */
-.sponsors-section {
+.sponsors-page-section {
     padding: 60px 0;
 }
 
-.sponsors-grid {
+.sponsors-grid-complex {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "toplogo1 toplogo2 toplogo3"
+        "midlogo1   title    midlogo2"
+        ".          botlogo  .";
     align-items: center;
+    column-gap: 30px;
 }
+.sponsor-grid-title {
+    grid-area: title;
+    text-align: center;
+    margin: 0;
+    font-size: 3rem;
+}
+.sponsors-grid-complex .sponsor-logo:nth-of-type(1) { grid-area: toplogo1; }
+.sponsors-grid-complex .sponsor-logo:nth-of-type(2) {grid-area: toplogo2;}
+.sponsors-grid-complex .sponsor-logo:nth-of-type(3) { grid-area: toplogo3; }
+.sponsors-grid-complex .sponsor-logo:nth-of-type(4) { grid-area: midlogo1; }
+.sponsors-grid-complex .sponsor-logo:nth-of-type(5) { grid-area: midlogo2; }
+.sponsors-grid-complex .sponsor-logo:nth-of-type(6) { grid-area: botlogo; }
 
+/* General style to center the logo image inside its container */
 .sponsor-logo {
     display: flex;
     justify-content: center;
@@ -379,15 +396,25 @@ footer {
 .sponsor-logo img {
     max-width: 100%;
     height: auto;
-    filter: grayscale(100%); /* Makes logos grayscale */
     opacity: 0.8;
     transition: all 0.3s ease;
 }
 
 .sponsor-logo img:hover {
-    filter: grayscale(0%); /* Brings back color on hover */
     opacity: 1;
     transform: scale(1.05);
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .sponsors-grid-complex {
+        grid-template-columns: 1fr 1fr; /* Switch to 2 columns */
+        grid-template-areas:
+            "title    title"
+            "toplogo1 toplogo2"
+            "midlogo1 midlogo2"
+            "botlogo  .";
+    }
 }
 
 .become-sponsor-section {
