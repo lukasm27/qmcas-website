@@ -130,11 +130,25 @@ header {
     display: flex;
     flex-direction: column;
 }
+/* Add these new styles for the card's meta info */
 
-.card-date {
+.card-meta {
+    display: flex;
+    justify-content: space-between; /* Pushes items to opposite ends */
+    align-items: center;
     font-size: 0.8rem;
-    color: #777;
-    margin-bottom: 10px;
+    color: #555; /* A slightly darker grey for readability */
+    margin-bottom: 15px;
+}
+
+.card-author {
+    font-weight: 600; /* Makes the author's name stand out a bit */
+}
+
+/* Adjust the old card-date style */
+.card-date {
+    margin-bottom: 0; /* Remove the old margin */
+    color: #555;
 }
 
 .card h3 {
@@ -403,7 +417,6 @@ footer {
     border: 0;
     padding: 0.5em;
     cursor: pointer;
-    vertical-align: middle;
 }
 
 .sr-only {
