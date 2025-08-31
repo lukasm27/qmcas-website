@@ -403,6 +403,7 @@ footer {
     border: 0;
     padding: 0.5em;
     cursor: pointer;
+    vertical-align: middle;
 }
 
 .sr-only {
