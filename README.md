@@ -8,6 +8,7 @@ This is a static website built with fundamental web technologies, focusing on a 
 HTML: For the structure and content of the website.
 CSS: For styling, layout, and responsive design to ensure the site works well on all devices.
 JavaScript: To optimise the website for mobile viewing.
+Netlify: To host the website for authentication for the members area.
 
 **Status**
 Current Status: In Development

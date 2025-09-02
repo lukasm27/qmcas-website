@@ -416,6 +416,8 @@ footer {
             "midlogo1"
             "midlogo2"
             "botlogo";
+    ;
+    gap: 40px;
     }
 }
 
