@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Accelerator - QMCAS</title>
+    <!-- This tag tells search engines not to index this members-only page -->
+    <meta name="robots" content="noindex">
+    
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="https://kit.fontawesome.com/5c5946fe44.js" crossorigin="anonymous"></script>
+    
+    <!-- Netlify Identity Widget Script -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="QMCAS Society Logo">
+        </a>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+        </button>
+        <nav id="primary-navigation" class="primary-navigation" data-visible="false">
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="articles.html">Firm Articles</a></li>
+                <li><a href="accelerator.html">Career Accelerator</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="membership.html">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Career Accelerator</h1>
+                <p>text</p>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 60px 0;">
+            <h2>text</h2>
+            <p>text</p>
+            <a href="#" class="button-secondary" download>file</a>
+            <a href="#" class="button-secondary" download>file</a>
+            
+            <h2 class="section-divider">text</h2>
+            <p>text</p>
+            <ul style="line-height: 2;">
+                <li><a href="#"><strong>text</strong></a></li>
+                <li><a href="#"><strong>text</strong></a></li>
+                <li><a href="#"><strong>text</strong></a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+    
+    <script src="nav.js"></script>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/accelerator.html";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
