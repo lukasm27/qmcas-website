@@ -408,12 +408,14 @@ footer {
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
     .sponsors-grid-complex {
-        grid-template-columns: 1fr 1fr; /* Switch to 2 columns */
+        grid-template-columns: 1fr;
         grid-template-areas:
-            "title    title"
-            "toplogo1 toplogo2"
-            "midlogo1 midlogo2"
-            "botlogo  .";
+            "title"
+            "toplogo1"
+            "toplogo2"
+            "midlogo1"
+            "midlogo2"
+            "botlogo";
     }
 }
 
@@ -542,19 +544,4 @@ footer {
 
 .join-now-section p {
     margin-bottom: 30px;
-}
-@media (max-width: 768px) {
-    .sponsors-grid-complex {
-        /* Switch to a single column on mobile */
-        grid-template-columns: 1fr;
-        /* Redefine the grid map for a simple vertical stack */
-        grid-template-areas:
-            "title"
-            "toplogo1"
-            "toplogo2"
-            "midlogo1"
-            "midlogo2"
-            "botlogo";
-        gap: 40px; /* Increase the gap for a stacked layout */
-    }
 }
