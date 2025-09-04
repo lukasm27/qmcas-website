@@ -1,17 +1,22 @@
 (function() {
-  // After a user logs in, Netlify Identity adds a hash to the URL
-  // that looks like #access_token=...
-  // We check for this to know that a login just happened.
+  // This code runs on every page load.
+
+  // Check if the URL contains a login token from Netlify Identity.
+  // This is the most reliable way to know a user has just logged in.
   if (window.location.hash.includes("access_token")) {
-    
-    // The widget kindly stores the page the user was trying to access.
-    const redirectUrl = sessionStorage.getItem("netlify-identity-redirect");
-    
-    if (redirectUrl) {
-      // If we know where they were going, send them there.
-      // We use .replace() so this action doesn't get added to the browser history,
-      // which prevents issues with the back button.
-      window.location.replace(redirectUrl);
+
+    // First, try to get the page the user was originally trying to visit.
+    // The Netlify widget is supposed to store this for us.
+    const intendedDestination = sessionStorage.getItem("netlify-identity-redirect");
+
+    if (intendedDestination) {
+      // If we found the intended page, go there.
+      // Using .replace() prevents back-button redirect loops.
+      window.location.replace(intendedDestination);
+    } else {
+      // If the widget didn't store the page, this is our fallback.
+      // We will send them to the main members-only page.
+      window.location.replace("/accelerator.html");
     }
   }
 })();
