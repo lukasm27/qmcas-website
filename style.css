@@ -548,3 +548,8 @@ footer {
 .join-now-section p {
     margin-bottom: 30px;
 }
+
+.error-page-content {
+    text-align: center;
+    padding: 80px 20px;
+}
