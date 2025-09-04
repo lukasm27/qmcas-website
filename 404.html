@@ -25,6 +25,14 @@
     <footer>
     </footer>
     <script src="nav.js"></script>
-    <script src="auth.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("login", function() {
+          // After a user logs in, simply reload the current page.
+          // This allows Netlify to re-evaluate their access and show the content.
+          location.reload();
+        });
+      }
+    </script>
 </body>
 </html>
