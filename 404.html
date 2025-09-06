@@ -27,11 +27,23 @@
     <script src="nav.js"></script>
     <script>
       if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("login", function() {
-          // After a user logs in, simply reload the current page.
-          // This allows Netlify to re-evaluate their access and show the content.
-          location.reload();
-        });
+        const user = window.netlifyIdentity.currentUser();
+
+        if (user) {
+          // A user is ALREADY logged in, but has landed on this 404 page.
+          // This means they are stuck in a redirect loop.
+          // We break the loop by sending them to a safe page (the homepage).
+          window.location.href = "/";
+        } else {
+          // The user is NOT logged in. This is the correct path for a non-member.
+          // We set up the listener that will fire after they successfully log in.
+          window.netlifyIdentity.on("login", function() {
+            // As you requested, simply reload the page. The browser will try to
+            // access the original protected page again, but this time the user
+            // will be authenticated and will be granted access.
+            location.reload();
+          });
+        }
       }
     </script>
 </body>
