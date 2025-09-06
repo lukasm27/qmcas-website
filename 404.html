@@ -27,23 +27,30 @@
     <script src="nav.js"></script>
     <script>
       if (window.netlifyIdentity) {
-        const user = window.netlifyIdentity.currentUser();
-
-        if (user) {
-          // A user is ALREADY logged in, but has landed on this 404 page.
-          // This means they are stuck in a redirect loop.
-          // We break the loop by sending them to a safe page (the homepage).
-          window.location.href = "/";
-        } else {
-          // The user is NOT logged in. This is the correct path for a non-member.
-          // We set up the listener that will fire after they successfully log in.
-          window.netlifyIdentity.on("login", function() {
-            // As you requested, simply reload the page. The browser will try to
-            // access the original protected page again, but this time the user
-            // will be authenticated and will be granted access.
-            location.reload();
-          });
-        }
+        // The 'init' event fires once the widget is ready
+        // and knows if a user is logged in or not.
+        window.netlifyIdentity.on('init', function(user) {
+          
+          if (user) {
+            // A user is ALREADY logged in, but they've landed on this error page.
+            // This means they are stuck in a redirect loop.
+            // The safest way to break the loop is to send them to a public page.
+            // From the homepage, they can click the link again and it will work.
+            window.location.href = "/"; 
+          } else {
+            // No user is logged in. This is the correct path for a non-member.
+            // We set up the listener for when they DO successfully log in.
+            window.netlifyIdentity.on('login', function() {
+              // After they log in, send them to the page they were trying to access.
+              const intendedDestination = sessionStorage.getItem('netlify-identity-redirect');
+              window.location.href = intendedDestination || "/accelerator.html";
+            });
+            
+            // Since they are not logged in, the redirect rule should have already
+            // triggered the login modal. This is a fallback just in case.
+            window.netlifyIdentity.open();
+          }
+        });
       }
     </script>
 </body>
