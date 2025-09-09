@@ -85,7 +85,7 @@ header {
     background-position: center;
     color: var(--light-text-color);
     text-align: center;
-    padding: 250px 0;
+    padding: 220px 0;
 }
 .hero h1 {
     font-size: 3rem;
@@ -322,13 +322,27 @@ footer {
     border-top: 1px solid #ddd;
 }
 /* ============== ABOUT PAGE STYLES ============== */
-.mission-section {
-    padding: 60px 0;
+.about-hero{
+    background-color: var(--primary-color); /* Fallback color */
+    background-image: linear-gradient(rgba(13, 44, 79, 0.5), rgba(13, 44, 79, 0.5)), url('images/about.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-text-color);
     text-align: center;
+    padding: 100px 0;
+}
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+.mission-section {
+    padding: 30px 0;
+    text-align: left;
 }
 
 .mission-section .container {
-    max-width: 800px; /* Makes the paragraph easier to read */
+    max-width: 1000px; /* Makes the paragraph easier to read */
 }
 
 .committee-section {
