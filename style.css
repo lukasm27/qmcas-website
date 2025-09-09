@@ -32,6 +32,7 @@ h2 {
     font-size: 2rem;
 }
 
+
 a {
     text-decoration: none;
     color: var(--primary-color);
@@ -112,9 +113,16 @@ header {
 
 
 /* ============== ANNOUNCEMENTS SECTION ============== */
+.section-subtitle {
+    text-align: left;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
 .announcements {
     padding: 80px 0;
-    text-align: center;
+    text-align: left;
 }
 
 .announcement-grid {
