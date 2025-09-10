@@ -407,7 +407,9 @@ footer {
 }
 /* ============== SPONSORS PAGE STYLES ============== */
 .sponsors-page-section {
-    padding: 60px 0;
+    padding-top: 0px;
+    padding-bottom: 60px 0;
+    
 }
 
 .sponsors-grid-complex {
