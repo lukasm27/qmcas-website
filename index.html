@@ -62,8 +62,24 @@
             </div>
         </div>
     </div>
-<footer>
 </footer>
 <script src="nav.js"></script>
+<script>
+    function setHeroHeight() {
+        const header = document.querySelector('header');
+        const hero = document.querySelector('.hero');
+        
+        const headerHeight = header.offsetHeight;
+        const windowHeight = window.innerHeight;
+        
+        hero.style.height = `${windowHeight - headerHeight}px`;
+    }
+
+    // Set the height on initial page load
+    window.addEventListener('load', setHeroHeight);
+
+    // Update the height if the browser window is resized
+    window.addEventListener('resize', setHeroHeight);
+</script>
 </body>
 </html>
