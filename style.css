@@ -85,7 +85,7 @@ header {
     background-position: center;
     color: var(--light-text-color);
     text-align: center;
-    padding: 250px 0;
+    padding: 220px 0;
 }
 .hero h1 {
     font-size: 3rem;
@@ -180,7 +180,7 @@ footer {
     background-color: var(--primary-color);
     color: rgba(255, 255, 255, 0.8); /* Slightly softer white text */
     padding: 50px 0 20px 0;
-    margin-top: 40px;
+    margin-top: 0px;
 }
 
 .footer-content {
