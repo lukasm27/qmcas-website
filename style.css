@@ -80,7 +80,7 @@ header {
 /* ============== HERO SECTION ============== */
 .hero {
     background-color: var(--primary-color); /* Fallback color */
-    background-image: linear-gradient(rgba(13, 44, 79, 0.5), rgba(13, 44, 79, 0.5)), url('images/home0.jpg');
+    background-image: linear-gradient(rgba(13, 44, 79, 0.5), rgba(13, 44, 79, 0.5)), url('images/home.jpg');
     background-size: cover;
     background-position: center;
     color: var(--light-text-color);
