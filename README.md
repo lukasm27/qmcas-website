@@ -1,4 +1,6 @@
 **Queen Mary Commercial Awareness Society (QMCAS) Website**
+**qmcas.com**
+
 **Project Overview**
 This repository contains the source code for the official website of the Queen Mary Commercial Awareness Society (QMCAS). The primary goal of this project is to establish a professional and centralized online presence for the society, providing members and interested students with easy access to information about events, resources, and membership.
 This project was developed on a freelance basis for QMCAS.
