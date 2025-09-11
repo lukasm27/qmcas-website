@@ -75,10 +75,8 @@
         hero.style.height = `${windowHeight - headerHeight}px`;
     }
 
-    // Set the height on initial page load
     window.addEventListener('load', setHeroHeight);
 
-    // Update the height if the browser window is resized
     window.addEventListener('resize', setHeroHeight);
 </script>
 </body>

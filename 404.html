@@ -10,7 +10,6 @@
 </head>
 <body>
     <header>
-        <!-- Paste your full header code here -->
     </header>
 
     <main>
@@ -27,29 +26,20 @@
     <script src="nav.js"></script>
     <script>
       (function() {
-        // Check if this is a failed redirect attempt. If so, do nothing to prevent a loop.
         if (window.location.search.includes('retry=true')) {
           return; 
         }
 
         if (window.netlifyIdentity) {
-          // The 'init' event fires once the widget is ready.
           window.netlifyIdentity.on('init', function(user) {
             
             if (user) {
-              // A user is ALREADY logged in, but they've landed on this page.
-              // This is our one attempt to fix it by sending them to the correct page.
-              // We add "?retry=true" so if this fails, the script won't run again.
               window.location.href = "/accelerator.html?retry=true"; 
             } else {
-              // No user is logged in. This is the correct path for a non-member.
-              // Set up the listener for when they successfully log in.
               window.netlifyIdentity.on('login', function() {
                 const intendedDestination = sessionStorage.getItem('netlify-identity-redirect');
                 window.location.href = intendedDestination || "/accelerator.html";
               });
-              
-              // Since they are not logged in, open the login modal for them.
               window.netlifyIdentity.open();
             }
           });

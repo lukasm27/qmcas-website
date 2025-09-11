@@ -7,13 +7,11 @@ This project was developed on a freelance basis for QMCAS.
 This is a static website built with fundamental web technologies, focusing on a clean, responsive, and lightweight user experience.
 HTML: For the structure and content of the website.
 CSS: For styling, layout, and responsive design to ensure the site works well on all devices.
-JavaScript: To optimise the website for mobile viewing.
-Netlify: To host the website for authentication for the members area.
+JavaScript: For some dynamic feautures.
+Netlify: To host the website for authentication for the Career Accelerator.
 
 **Status**
-Current Status: In Development
-
-The website is currently being built and is expected to launch in September 2025.
+Current Status: Active
 
 **Author**
 Lukas Mykhnenko
