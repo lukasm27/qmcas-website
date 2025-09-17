@@ -273,7 +273,7 @@ footer {
 
 .event-date {
     background-color: var(--secondary-color);
-    color: var(--primary-color);
+    color: var(--light-text-color);
     text-align: center;
     padding: 15px;
     border-radius: 8px;
