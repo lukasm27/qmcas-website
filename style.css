@@ -268,6 +268,7 @@ footer {
 .event-card {
     display: flex;
     align-items: flex-start;
+    flex-grow: 1;
     gap: 25px;
 }
 
@@ -342,6 +343,24 @@ footer {
     padding-top: 40px;
     border-top: 1px solid #ddd;
 }
+
+.event-details {
+    flex-grow: 1; 
+}
+
+.event-image {
+    width: 300px; /* You can adjust the width */
+    object-fit: cover;
+    border-radius: 8px; /* Give the image rounded corners */
+    flex-shrink: 0; /* Prevents the image from shrinking */
+}
+
+.event-row {
+    display: flex;
+    align-items: stretch; /* Makes the card and image the same height */
+    gap: 30px; /* Space between the card and the image */
+}
+
 /* ============== ABOUT PAGE STYLES ============== */
 .about-hero{
     background-color: var(--primary-color); 
@@ -351,7 +370,9 @@ footer {
     color: var(--light-text-color);
     text-align: center;
     padding: 100px 0;
+    flex-grow: 1;
 }
+
 .about-hero h1 {
     font-size: 3rem;
     margin-bottom: 50px;
