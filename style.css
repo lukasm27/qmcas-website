@@ -636,3 +636,39 @@ footer {
     text-align: center;
     padding: 80px 20px;
 }
+
+/* ============== CLIFFORD CHANCE HOVER BUTTON ============== */
+
+/* Set the container to relative so we can position the button inside it */
+.cc-logo-container {
+    position: relative;
+}
+
+/* Style and position the Read More button */
+.read-more-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+    z-index: 10;
+    pointer-events: none; /* Prevents the invisible button from blocking clicks */
+}
+
+/* Show the button when hovering over the container */
+.cc-logo-container:hover .read-more-btn {
+    opacity: 1;
+    pointer-events: auto; /* Makes the button clickable once it appears */
+}
+
+/* Optional: Dim the logo slightly so the "Read More" button is easier to read */
+.cc-logo-container:hover img {
+    opacity: 0.3 !important; /* Overrides your existing img:hover rule just for this logo */
+}
