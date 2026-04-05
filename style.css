@@ -680,7 +680,6 @@ footer {
     border-radius: 5px;
     font-weight: 700;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    justify-content: center;
 }
 
 .cc-button:hover {
@@ -689,8 +688,8 @@ footer {
 }
 
 /* Add spacing around CTA buttons inside mission sections */
-.mission-section .cta-button {
-    display: inline-block;
-    margin-top: 15px;
-    margin-bottom: 30px;
+.mission-section .cc-button {
+    display: block;
+    width: fit-content;
+    margin: 15px auto 30px auto; /* 'auto' on the left and right is what centers it */
 }
